@@ -177,6 +177,18 @@ input[name="link"] {
   color: var(--grey-100);
 }
 
+.modal-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.restaurant__link {
+  margin: 15px 0 15px 0;
+  color: inherit;
+}
+
 @keyframes bottom-sheet-up {
   0% {
     transform: translateY(100%);
@@ -237,9 +249,17 @@ input[name="link"] {
 }
 
 .restaurant__info {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  cursor: pointer;
+}
+
+.restaurant__like {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
 }
 
 .restaurant__name {
@@ -259,6 +279,40 @@ input[name="link"] {
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+.tab-container {
+  width: 100%;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  display: flex;
+  margin-top: 15px;
+  padding: 0 20px;
+}
+
+.all,
+.favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grey-300);
+  border-bottom: 2px solid var(--grey-200);
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.selected {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.filter-toggle {
+  display: none !important;
 }
 
 /* Colors *****************************************/
