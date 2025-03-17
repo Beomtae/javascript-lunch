@@ -314,7 +314,7 @@ const filterRestaurants = (category, sort) => {
 class ModalDetail extends Modal {
   template() {
     const { name, distance, description, imgSrc, imgAlt, like, link } = this.props.data;
-    const starImg = like ? "/filledStar.png" : "/unFilledStar.png";
+    const starImg = like ? "./filledStar.png" : "./unFilledStar.png";
     return `
         <div class="modal-backdrop"></div>
         <div class="modal-container">
@@ -357,7 +357,7 @@ class ModalDetail extends Modal {
     setStoredRestaurantData(storedData);
   }
   updateLikeUI() {
-    const starImg = this.props.data.like ? "/filledStar.png" : "/unFilledStar.png";
+    const starImg = this.props.data.like ? "./filledStar.png" : "./unFilledStar.png";
     this.$target.querySelector("#modal__star").src = starImg;
     document.querySelectorAll(".restaurant").forEach((item) => {
       var _a;
@@ -383,7 +383,7 @@ class Restaurant extends Component {
   }
   template() {
     const { name, distance, description, imgSrc, imgAlt, like } = this.props;
-    const starImg = this.props.like ? "/filledStar.png" : "/unFilledStar.png";
+    const starImg = this.props.like ? "./filledStar.png" : "./unFilledStar.png";
     return (
       /*html*/
       ` 
@@ -414,7 +414,7 @@ class Restaurant extends Component {
       (restaurant) => restaurant.name === this.props.name ? { ...restaurant, like: this.props.like } : restaurant
     );
     setStoredRestaurantData(storedData);
-    const starImg = this.props.like ? "/filledStar.png" : "/unFilledStar.png";
+    const starImg = this.props.like ? "./filledStar.png" : "./unFilledStar.png";
     this.$target.querySelector(".list__star").src = starImg;
   }
   handleDetailModal() {
